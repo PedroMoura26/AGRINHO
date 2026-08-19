@@ -1,21 +1,30 @@
+Claro — abaixo está o **código inteiro corrigido**, com os `\` removidos e as **duas imagens adicionadas** nas seções de Produção Agrícola e Sustentabilidade.
 
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroSustentável - Produzir com o Futuro</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
         }
-        
+
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1625246333192-9e5e2a5f4c0f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80');
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1625246333192-9e5e2a5f4c0f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -23,7 +32,7 @@
         .section-title {
             position: relative;
         }
-        
+
         .section-title:after {
             content: '';
             position: absolute;
@@ -37,7 +46,7 @@
         .nav-link {
             transition: all 0.3s ease;
         }
-        
+
         .nav-link:hover {
             color: #15803d;
             transform: translateY(-2px);
@@ -46,26 +55,36 @@
         .card {
             transition: all 0.4s ease;
         }
-        
+
         .card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            box-shadow:
+                0 20px 25px -5px rgb(0 0 0 / 0.1),
+                0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
 
     <!-- NAVBAR -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
             <div class="flex items-center gap-3">
                 <i class="fa-solid fa-leaf text-3xl text-green-600"></i>
+
                 <div>
-                    <h1 class="text-2xl font-bold text-green-700">AgroSustentável</h1>
-                    <p class="text-xs text-green-600 -mt-1">Brasil</p>
+                    <h1 class="text-2xl font-bold text-green-700">
+                        AgroSustentável
+                    </h1>
+
+                    <p class="text-xs text-green-600 -mt-1">
+                        Brasil
+                    </p>
                 </div>
             </div>
-            
+
             <div class="hidden md:flex items-center gap-8 text-lg">
                 <a href="#inicio" class="nav-link font-medium">Início</a>
                 <a href="#producao" class="nav-link font-medium">Produção</a>
@@ -74,344 +93,785 @@
                 <a href="#futuro" class="nav-link font-medium">Soluções</a>
                 <a href="#contato" class="nav-link font-medium">Contato</a>
             </div>
-            
+
             <button onclick="toggleMenu()" class="md:hidden text-2xl">
                 <i class="fa-solid fa-bars"></i>
             </button>
+
         </div>
     </nav>
 
     <!-- MOBILE MENU -->
     <div id="mobileMenu" class="hidden md:hidden bg-white border-b">
         <div class="flex flex-col px-6 py-4 gap-4 text-lg">
-            <a href="#inicio" class="nav-link" onclick="toggleMenu()">Início</a>
-            <a href="#producao" class="nav-link" onclick="toggleMenu()">Produção Agrícola</a>
-            <a href="#sustentabilidade" class="nav-link" onclick="toggleMenu()">Sustentabilidade</a>
-            <a href="#desafios" class="nav-link" onclick="toggleMenu()">Desafios Ambientais</a>
-            <a href="#futuro" class="nav-link" onclick="toggleMenu()">Soluções e Futuro</a>
-            <a href="#contato" class="nav-link" onclick="toggleMenu()">Contato</a>
+
+            <a href="#inicio" class="nav-link" onclick="toggleMenu()">
+                Início
+            </a>
+
+            <a href="#producao" class="nav-link" onclick="toggleMenu()">
+                Produção Agrícola
+            </a>
+
+            <a href="#sustentabilidade" class="nav-link" onclick="toggleMenu()">
+                Sustentabilidade
+            </a>
+
+            <a href="#desafios" class="nav-link" onclick="toggleMenu()">
+                Desafios Ambientais
+            </a>
+
+            <a href="#futuro" class="nav-link" onclick="toggleMenu()">
+                Soluções e Futuro
+            </a>
+
+            <a href="#contato" class="nav-link" onclick="toggleMenu()">
+                Contato
+            </a>
+
         </div>
     </div>
 
     <!-- HERO BANNER -->
     <section id="inicio" class="hero-bg h-screen flex items-center text-white">
+
         <div class="max-w-7xl mx-auto px-6 text-center">
+
             <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Produzir mais,<br>
-                <span class="text-green-400">preservando o amanhã.</span>
+                Produzir mais,
+                <br>
+                <span class="text-green-400">
+                    preservando o amanhã.
+                </span>
             </h1>
+
             <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-10">
                 O agronegócio brasileiro unindo tecnologia, inovação e sustentabilidade
             </p>
+
             <div class="flex flex-col md:flex-row gap-5 justify-center">
-                <a href="#producao" class="bg-green-600 hover:bg-green-700 px-10 py-4 rounded-full text-lg font-semibold transition">
+
+                <a href="#producao"
+                   class="bg-green-600 hover:bg-green-700 px-10 py-4 rounded-full text-lg font-semibold transition">
                     Conhecer a Produção
                 </a>
-                <a href="#futuro" class="border-2 border-white hover:bg-white hover:text-green-800 px-10 py-4 rounded-full text-lg font-semibold transition">
+
+                <a href="#futuro"
+                   class="border-2 border-white hover:bg-white hover:text-green-800 px-10 py-4 rounded-full text-lg font-semibold transition">
                     Ver Soluções
                 </a>
+
             </div>
+
         </div>
     </section>
 
     <!-- INTRODUÇÃO -->
     <section class="py-20 bg-white">
+
         <div class="max-w-7xl mx-auto px-6">
+
             <div class="grid md:grid-cols-2 gap-12 items-center">
+
                 <div>
-                    <h2 class="text-4xl font-bold mb-6 section-title">O Agronegócio Brasileiro</h2>
+
+                    <h2 class="text-4xl font-bold mb-6 section-title">
+                        O Agronegócio Brasileiro
+                    </h2>
+
                     <p class="text-lg text-gray-600 leading-relaxed">
-                        O agronegócio é um dos pilares da economia brasileira, responsável por grande parte das exportações e pela segurança alimentar do país. 
-                        No entanto, o crescimento acelerado exige uma nova postura: <strong>produzir mais, impactando menos.</strong>
+                        O agronegócio é um dos pilares da economia brasileira,
+                        responsável por grande parte das exportações e pela
+                        segurança alimentar do país. No entanto, o crescimento
+                        acelerado exige uma nova postura:
+                        <strong>produzir mais, impactando menos.</strong>
                     </p>
+
                     <div class="mt-8 grid grid-cols-3 gap-6 text-center">
+
                         <div>
-                            <div class="text-3xl font-bold text-green-600">23%</div>
-                            <div class="text-sm text-gray-500">do PIB brasileiro</div>
+                            <div class="text-3xl font-bold text-green-600">
+                                23%
+                            </div>
+
+                            <div class="text-sm text-gray-500">
+                                do PIB brasileiro
+                            </div>
                         </div>
+
                         <div>
-                            <div class="text-3xl font-bold text-green-600">19M</div>
-                            <div class="text-sm text-gray-500">de empregos</div>
+                            <div class="text-3xl font-bold text-green-600">
+                                19M
+                            </div>
+
+                            <div class="text-sm text-gray-500">
+                                de empregos
+                            </div>
                         </div>
+
                         <div>
-                            <div class="text-3xl font-bold text-green-600">+150</div>
-                            <div class="text-sm text-gray-500">países exportados</div>
+                            <div class="text-3xl font-bold text-green-600">
+                                +150
+                            </div>
+
+                            <div class="text-sm text-gray-500">
+                                países exportados
+                            </div>
                         </div>
+
                     </div>
                 </div>
+
                 <div>
-                    <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c1d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" 
-                         alt="Plantação sustentável" class="rounded-2xl shadow-2xl">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c1d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80"
+                        alt="Plantação sustentável"
+                        class="rounded-2xl shadow-2xl w-full"
+                    >
+
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- SEÇÃO 1 - PRODUÇÃO AGRÍCOLA -->
     <section id="producao" class="py-20 bg-gray-100">
+
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 section-title mx-auto">Produção Agrícola</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl card">
-                    <i class="fa-solid fa-chart-line text-4xl text-green-600 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-3">Crescimento Contínuo</h3>
-                    <p class="text-gray-600">O Brasil é líder mundial na produção de soja, café, cana-de-açúcar, carne e frutas.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl card">
-                    <i class="fa-solid fa-users text-4xl text-green-600 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-3">Geração de Empregos</h3>
-                    <p class="text-gray-600">Emprega milhões de brasileiros, desde o pequeno produtor até grandes empresas.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl card">
-                    <i class="fa-solid fa-tractor text-4xl text-green-600 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-3">Tecnologia no Campo</h3>
-                    <p class="text-gray-600">Máquinas modernas, GPS, sensores e automação revolucionam a produtividade.</p>
-                </div>
+
+            <h2 class="text-4xl font-bold text-center mb-12 section-title mx-auto">
+                Produção Agrícola
+            </h2>
+
+            <!-- PRIMEIRA NOVA IMAGEM -->
+            <div class="mb-12">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80"
+                    alt="Campo agrícola"
+                    class="w-full h-80 object-cover rounded-3xl shadow-xl"
+                >
+
             </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="bg-white p-8 rounded-2xl card">
+
+                    <i class="fa-solid fa-chart-line text-4xl text-green-600 mb-6"></i>
+
+                    <h3 class="text-2xl font-semibold mb-3">
+                        Crescimento Contínuo
+                    </h3>
+
+                    <p class="text-gray-600">
+                        O Brasil é líder mundial na produção de soja,
+                        café, cana-de-açúcar, carne e frutas.
+                    </p>
+
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl card">
+
+                    <i class="fa-solid fa-users text-4xl text-green-600 mb-6"></i>
+
+                    <h3 class="text-2xl font-semibold mb-3">
+                        Geração de Empregos
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Emprega milhões de brasileiros, desde o pequeno
+                        produtor até grandes empresas.
+                    </p>
+
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl card">
+
+                    <i class="fa-solid fa-tractor text-4xl text-green-600 mb-6"></i>
+
+                    <h3 class="text-2xl font-semibold mb-3">
+                        Tecnologia no Campo
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Máquinas modernas, GPS, sensores e automação
+                        revolucionam a produtividade.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
     </section>
 
     <!-- SEÇÃO 2 - SUSTENTABILIDADE -->
     <section id="sustentabilidade" class="py-20 bg-white">
+
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 section-title mx-auto">Sustentabilidade no Campo</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card bg-white border border-green-100 p-8 rounded-3xl">
-                    <div class="h-16 w-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-droplet text-3xl text-green-600"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Irrigação Inteligente</h3>
-                    <p class="text-gray-600">Economia de até 40% de água com sensores e automação.</p>
-                </div>
-                <div class="card bg-white border border-green-100 p-8 rounded-3xl">
-                    <div class="h-16 w-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-drone text-3xl text-green-600"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Drones Agrícolas</h3>
-                    <p class="text-gray-600">Monitoramento em tempo real da saúde das plantas.</p>
-                </div>
-                <div class="card bg-white border border-green-100 p-8 rounded-3xl">
-                    <div class="h-16 w-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-solar-panel text-3xl text-green-600"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Energia Renovável</h3>
-                    <p class="text-gray-600">Painéis solares e biodigestores gerando energia limpa.</p>
-                </div>
-                <div class="card bg-white border border-green-100 p-8 rounded-3xl">
-                    <div class="h-16 w-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-leaf text-3xl text-green-600"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Agricultura de Precisão</h3>
-                    <p class="text-gray-600">Uso inteligente de insumos com base em dados.</p>
-                </div>
+
+            <h2 class="text-4xl font-bold text-center mb-12 section-title mx-auto">
+                Sustentabilidade no Campo
+            </h2>
+
+            <!-- SEGUNDA NOVA IMAGEM -->
+            <div class="mb-12">
+
+                <img
+                    src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80"
+                    alt="Agricultura sustentável"
+                    class="w-full h-80 object-cover rounded-3xl shadow-xl"
+                >
+
             </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="card bg-white border border-green-100 p-8 rounded-3xl">
+
+                    <div class="h-16 w-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+
+                        <i class="fa-solid fa-droplet text-3xl text-green-600"></i>
+
+                    </div>
+
+                    <h3 class="font-semibold text-xl mb-3">
+                        Irrigação Inteligente
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Economia de até 40% de água com sensores e automação.
+                    </p>
+
+                </div>
+
+                <div class="card bg-white border border-green-100 p-8 rounded-3xl">
+
+                    <div class="h-16 w-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+
+                        <i class="fa-solid fa-drone text-3xl text-green-600"></i>
+
+                    </div>
+
+                    <h3 class="font-semibold text-xl mb-3">
+                        Drones Agrícolas
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Monitoramento em tempo real da saúde das plantas.
+                    </p>
+
+                </div>
+
+                <div class="card bg-white border border-green-100 p-8 rounded-3xl">
+
+                    <div class="h-16 w-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+
+                        <i class="fa-solid fa-solar-panel text-3xl text-green-600"></i>
+
+                    </div>
+
+                    <h3 class="font-semibold text-xl mb-3">
+                        Energia Renovável
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Painéis solares e biodigestores gerando energia limpa.
+                    </p>
+
+                </div>
+
+                <div class="card bg-white border border-green-100 p-8 rounded-3xl">
+
+                    <div class="h-16 w-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+
+                        <i class="fa-solid fa-leaf text-3xl text-green-600"></i>
+
+                    </div>
+
+                    <h3 class="font-semibold text-xl mb-3">
+                        Agricultura de Precisão
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Uso inteligente de insumos com base em dados.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
     </section>
 
     <!-- SEÇÃO 3 - DESAFIOS -->
     <section id="desafios" class="py-20 bg-red-50">
+
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 section-title mx-auto text-red-700">Desafios Ambientais</h2>
-            
+
+            <h2 class="text-4xl font-bold text-center mb-12 section-title mx-auto text-red-700">
+                Desafios Ambientais
+            </h2>
+
             <div class="grid md:grid-cols-2 gap-10">
+
                 <div class="space-y-8">
+
                     <div class="flex gap-6">
+
                         <i class="fa-solid fa-tree text-4xl text-red-500 mt-1"></i>
+
                         <div>
-                            <h4 class="font-semibold text-xl">Desmatamento</h4>
-                            <p class="text-gray-600">Perda de vegetação nativa para expansão agrícola.</p>
+
+                            <h4 class="font-semibold text-xl">
+                                Desmatamento
+                            </h4>
+
+                            <p class="text-gray-600">
+                                Perda de vegetação nativa para expansão agrícola.
+                            </p>
+
                         </div>
+
                     </div>
+
                     <div class="flex gap-6">
+
                         <i class="fa-solid fa-water text-4xl text-red-500 mt-1"></i>
+
                         <div>
-                            <h4 class="font-semibold text-xl">Poluição de Recursos Hídricos</h4>
-                            <p class="text-gray-600">Uso excessivo de agrotóxicos afeta rios e lençóis.</p>
+
+                            <h4 class="font-semibold text-xl">
+                                Poluição de Recursos Hídricos
+                            </h4>
+
+                            <p class="text-gray-600">
+                                Uso excessivo de agrotóxicos afeta rios e lençóis.
+                            </p>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="space-y-8">
+
                     <div class="flex gap-6">
+
                         <i class="fa-solid fa-smog text-4xl text-red-500 mt-1"></i>
+
                         <div>
-                            <h4 class="font-semibold text-xl">Emissões de Carbono</h4>
-                            <p class="text-gray-600">Contribuição para o aquecimento global.</p>
+
+                            <h4 class="font-semibold text-xl">
+                                Emissões de Carbono
+                            </h4>
+
+                            <p class="text-gray-600">
+                                Contribuição para o aquecimento global.
+                            </p>
+
                         </div>
+
                     </div>
+
                     <div class="flex gap-6">
+
                         <i class="fa-solid fa-temperature-high text-4xl text-red-500 mt-1"></i>
+
                         <div>
-                            <h4 class="font-semibold text-xl">Mudanças Climáticas</h4>
-                            <p class="text-gray-600">Impactos na produtividade e na biodiversidade.</p>
+
+                            <h4 class="font-semibold text-xl">
+                                Mudanças Climáticas
+                            </h4>
+
+                            <p class="text-gray-600">
+                                Impactos na produtividade e na biodiversidade.
+                            </p>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- SEÇÃO 4 - SOLUÇÕES E FUTURO -->
     <section id="futuro" class="py-20 bg-white">
+
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 section-title mx-auto">Soluções e o Futuro</h2>
-            
+
+            <h2 class="text-4xl font-bold text-center mb-12 section-title mx-auto">
+                Soluções e o Futuro
+            </h2>
+
             <div class="grid md:grid-cols-2 gap-12">
+
                 <div>
+
                     <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+
                         <i class="fa-solid fa-seedling text-green-600"></i>
+
                         Agricultura Regenerativa
+
                     </h3>
+
                     <ul class="space-y-4 text-lg">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Restauração do solo</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Rotação de culturas</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Plantio direto</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Integração lavoura-pecuária-floresta</li>
+
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            Restauração do solo
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            Rotação de culturas
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            Plantio direto
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            Integração lavoura-pecuária-floresta
+                        </li>
+
                     </ul>
+
                 </div>
+
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6">Tecnologias do Amanhã</h3>
+
+                    <h3 class="text-2xl font-semibold mb-6">
+                        Tecnologias do Amanhã
+                    </h3>
+
                     <div class="bg-gray-50 p-8 rounded-3xl">
+
                         <ul class="space-y-6">
-                            <li><strong>Inteligência Artificial:</strong> Previsão de pragas e otimização de colheita</li>
-                            <li><strong>Reflorestamento:</strong> Projetos de compensação ambiental</li>
-                            <li><strong>Biotecnologia:</strong> Culturas mais resistentes e eficientes</li>
+
+                            <li>
+                                <strong>Inteligência Artificial:</strong>
+                                Previsão de pragas e otimização de colheita
+                            </li>
+
+                            <li>
+                                <strong>Reflorestamento:</strong>
+                                Projetos de compensação ambiental
+                            </li>
+
+                            <li>
+                                <strong>Biotecnologia:</strong>
+                                Culturas mais resistentes e eficientes
+                            </li>
+
                         </ul>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- SEÇÃO 5 - CONTATO -->
     <section id="contato" class="py-20 bg-green-900 text-white">
+
         <div class="max-w-7xl mx-auto px-6">
+
             <div class="grid md:grid-cols-2 gap-12">
+
                 <div>
-                    <h2 class="text-4xl font-bold mb-8">Vamos conversar sobre o futuro?</h2>
-                    <p class="text-green-200 text-lg">Envie suas dúvidas, sugestões ou entre em contato para mais informações.</p>
-                    
+
+                    <h2 class="text-4xl font-bold mb-8">
+                        Vamos conversar sobre o futuro?
+                    </h2>
+
+                    <p class="text-green-200 text-lg">
+                        Envie suas dúvidas, sugestões ou entre em contato
+                        para mais informações.
+                    </p>
+
                     <div class="mt-10 space-y-6">
+
                         <div class="flex items-center gap-4">
+
                             <i class="fa-solid fa-envelope text-2xl text-green-400"></i>
+
                             <div>
-                                <p class="font-medium">contato@agrosustentavel.com.br</p>
+                                <p class="font-medium">
+                                    contato@agrosustentavel.com.br
+                                </p>
                             </div>
+
                         </div>
+
                         <div class="flex items-center gap-4">
+
                             <i class="fa-solid fa-phone text-2xl text-green-400"></i>
+
                             <div>
-                                <p class="font-medium">(11) 98765-4321</p>
+                                <p class="font-medium">
+                                    (11) 98765-4321
+                                </p>
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
-                
-                <!-- Formulário -->
+
+                <!-- FORMULÁRIO -->
                 <form class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl">
+
                     <div class="grid grid-cols-2 gap-6">
-                        <input type="text" placeholder="Nome" class="bg-white/20 border border-white/30 rounded-xl px-5 py-4 text-white placeholder:text-green-200 focus:outline-none">
-                        <input type="email" placeholder="E-mail" class="bg-white/20 border border-white/30 rounded-xl px-5 py-4 text-white placeholder:text-green-200 focus:outline-none">
+
+                        <input
+                            type="text"
+                            placeholder="Nome"
+                            class="bg-white/20 border border-white/30 rounded-xl px-5 py-4 text-white placeholder:text-green-200 focus:outline-none"
+                        >
+
+                        <input
+                            type="email"
+                            placeholder="E-mail"
+                            class="bg-white/20 border border-white/30 rounded-xl px-5 py-4 text-white placeholder:text-green-200 focus:outline-none"
+                        >
+
                     </div>
-                    <textarea placeholder="Sua mensagem..." rows="5" class="mt-6 bg-white/20 border border-white/30 rounded-xl px-5 py-4 text-white placeholder:text-green-200 w-full focus:outline-none"></textarea>
-                    <button type="button" onclick="enviarMensagem()" 
-                            class="mt-8 w-full bg-green-500 hover:bg-green-400 py-5 rounded-2xl font-semibold text-lg transition">
+
+                    <textarea
+                        placeholder="Sua mensagem..."
+                        rows="5"
+                        class="mt-6 bg-white/20 border border-white/30 rounded-xl px-5 py-4 text-white placeholder:text-green-200 w-full focus:outline-none"
+                    ></textarea>
+
+                    <button
+                        type="button"
+                        onclick="enviarMensagem()"
+                        class="mt-8 w-full bg-green-500 hover:bg-green-400 py-5 rounded-2xl font-semibold text-lg transition"
+                    >
                         Enviar Mensagem
                     </button>
+
                 </form>
+
             </div>
+
         </div>
     </section>
 
     <!-- FRASE FINAL -->
     <div class="bg-green-700 py-16 text-center text-white">
+
         <div class="max-w-4xl mx-auto px-6">
+
             <p class="text-3xl italic font-light">
                 “Cuidar da natureza hoje é garantir alimento para o futuro.”
             </p>
+
         </div>
+
     </div>
 
     <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-400 py-12">
+
         <div class="max-w-7xl mx-auto px-6">
+
             <div class="grid md:grid-cols-4 gap-8">
+
                 <div>
+
                     <div class="flex items-center gap-3 text-white mb-4">
+
                         <i class="fa-solid fa-leaf text-3xl"></i>
-                        <span class="font-bold text-xl">AgroSustentável</span>
+
+                        <span class="font-bold text-xl">
+                            AgroSustentável
+                        </span>
+
                     </div>
-                    <p class="text-sm">Educando para um agronegócio mais consciente e sustentável.</p>
+
+                    <p class="text-sm">
+                        Educando para um agronegócio mais consciente e sustentável.
+                    </p>
+
                 </div>
+
                 <div>
-                    <h4 class="font-semibold text-white mb-4">Navegação</h4>
+
+                    <h4 class="font-semibold text-white mb-4">
+                        Navegação
+                    </h4>
+
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white">Início</a></li>
-                        <li><a href="#" class="hover:text-white">Produção</a></li>
-                        <li><a href="#" class="hover:text-white">Sustentabilidade</a></li>
-                        <li><a href="#" class="hover:text-white">Desafios</a></li>
+
+                        <li>
+                            <a href="#inicio" class="hover:text-white">
+                                Início
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#producao" class="hover:text-white">
+                                Produção
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#sustentabilidade" class="hover:text-white">
+                                Sustentabilidade
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#desafios" class="hover:text-white">
+                                Desafios
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
+
                 <div>
-                    <h4 class="font-semibold text-white mb-4">Recursos</h4>
+
+                    <h4 class="font-semibold text-white mb-4">
+                        Recursos
+                    </h4>
+
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white">Galeria de Imagens</a></li>
-                        <li><a href="#" class="hover:text-white">Quiz Sustentável</a></li>
-                        <li><a href="#" class="hover:text-white">Calculadora de Impacto</a></li>
+
+                        <li>
+                            <a href="#" class="hover:text-white">
+                                Galeria de Imagens
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-white">
+                                Quiz Sustentável
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-white">
+                                Calculadora de Impacto
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
+
                 <div>
-                    <h4 class="font-semibold text-white mb-4">Redes Sociais</h4>
+
+                    <h4 class="font-semibold text-white mb-4">
+                        Redes Sociais
+                    </h4>
+
                     <div class="flex gap-5 text-2xl">
+
                         <i class="fa-brands fa-instagram hover:text-white cursor-pointer"></i>
+
                         <i class="fa-brands fa-linkedin hover:text-white cursor-pointer"></i>
+
                         <i class="fa-brands fa-youtube hover:text-white cursor-pointer"></i>
+
                     </div>
+
                 </div>
+
             </div>
+
             <div class="text-center text-xs mt-12 border-t border-gray-800 pt-8">
+
                 © 2026 AgroSustentável - Projeto Educacional
+
             </div>
+
         </div>
     </footer>
 
+    <!-- JAVASCRIPT -->
     <script>
-        // Tailwind script já incluso via CDN
-        
+
         function toggleMenu() {
+
             const menu = document.getElementById('mobileMenu');
+
             menu.classList.toggle('hidden');
+
         }
-        
+
         function enviarMensagem() {
+
             alert("✅ Mensagem enviada com sucesso! Obrigado pelo seu contato.");
+
         }
-        
+
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
             anchor.addEventListener('click', function (e) {
+
                 if (this.getAttribute('href') !== '#') {
+
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
+
+                    const target = document.querySelector(
+                        this.getAttribute('href')
+                    );
+
                     if (target) {
+
                         target.scrollIntoView({
                             behavior: 'smooth'
                         });
+
                     }
+
                 }
+
             });
+
         });
-        
+
         // Scroll animation for cards
         window.addEventListener('scroll', () => {
+
             document.querySelectorAll('.card').forEach(card => {
+
                 const cardTop = card.getBoundingClientRect().top;
+
                 if (cardTop < window.innerHeight - 100) {
+
                     card.style.opacity = '1';
+
                 }
+
             });
+
         });
+
     </script>
+
 </body>
 </html>
+```
+
